@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+}
+
+/* 기준이 되는 부모 컨테이너에서 flex를 지정해놓고 */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    /* border: black solid 3px; */
+
+    /* flex-direction: column-reverse; */
+}
+
+.item {
+    border: black dashed;
+}
+
+/* 일괄적으로 특정 위치의 값만 선택할 때 odd, even */
+/* .item:nth-child(even) {
+    border: black dashed;
+} */

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="백엔드 개발자 양혜지를 설명하는 세 가지 키워드">
+  <title>나의 키워드 | 양혜지</title>
+  <style>
+    :root {
+      --primary: #176b5b;
+      --primary-dark: #0e4f43;
+      --ink: #17221f;
+      --muted: #52615d;
+      --line: #dce3df;
+      --background: #f7f8f5;
+      --paper: #ffffff;
+      --tag: #edf5f2;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--background);
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    a:focus-visible {
+      outline: 3px solid #f0a44b;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96); 
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .main-nav a {
+      color: var(--muted);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .main-nav a[aria-current="page"],
+    .main-nav a:hover { color: var(--primary); }
+
+    main { min-height: calc(100vh - 206px); }
+
+    .intro {
+      padding-block: clamp(64px, 9vw, 100px) 48px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 6vw, 4rem);
+      line-height: 1.25;
+    }
+
+    .intro-description {
+      max-width: 620px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .keyword-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin: 0;
+      padding: 0 0 clamp(72px, 10vw, 112px);
+      list-style: none;
+    }
+
+    .keyword-card {
+      height: 100%;
+      padding: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--primary);
+      border-radius: 8px;
+    }
+
+    .number {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .keyword-card h2 {
+      min-height: 3.4em;
+      margin: 0 0 28px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .answer-label {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .answer {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding-block: 40px;
+      color: #ffffff;
+      background: var(--ink);
+    }
+
+    footer p { margin: 0; }
+    footer small { color: #bfcac6; }
+
+    @media (max-width: 760px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .brand { font-size: 1rem; }
+      .main-nav ul { gap: 14px; }
+      .keyword-list { grid-template-columns: 1fr; }
+      .keyword-card h2 { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">YANG HYEJI</a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <ul>
+          <li><a href="index.html">소개</a></li>
+          <li><a href="keyword.html" aria-current="page">키워드</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container intro" aria-labelledby="page-title">
+      <p class="eyebrow">THREE KEYWORDS ABOUT ME</p>
+      <h1 id="page-title">나를 설명하는<br>세 가지 키워드</h1>
+      <p class="intro-description">
+        평소 즐기는 콘텐츠와 취미, 외출할 때 꼭 챙기는 물건을 소개합니다.
+      </p>
+    </section>
+
+    <section class="container" aria-label="나를 설명하는 세 가지 답변">
+      <ol class="keyword-list">
+        <li>
+          <article class="keyword-card" aria-labelledby="question-1">
+            <span class="number" aria-hidden="true">QUESTION 01</span>
+            <h2 id="question-1">내가 즐겨보는 콘텐츠는?</h2>
+            <p class="answer-label">나의 답변</p>
+            <p class="answer">예능 유튜브</p>
+          </article>
+        </li>
+        <li>
+          <article class="keyword-card" aria-labelledby="question-2">
+            <span class="number" aria-hidden="true">QUESTION 02</span>
+            <h2 id="question-2">나의 취미는?</h2>
+            <p class="answer-label">나의 답변</p>
+            <p class="answer">웨이트 운동</p>
+          </article>
+        </li>
+        <li>
+          <article class="keyword-card" aria-labelledby="question-3">
+            <span class="number" aria-hidden="true">QUESTION 03</span>
+            <h2 id="question-3">외출할 때 가방에 꼭 챙기는 물품은?</h2>
+            <p class="answer-label">나의 답변</p>
+            <p class="answer">에어팟, 보조배터리</p>
+          </article>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>더 나은 서비스를 함께 만들어가요.</strong></p>
+      <small>© 2026 Yang Hyeji. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
